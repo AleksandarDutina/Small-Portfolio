@@ -523,11 +523,10 @@ a {
 .col {
   flex: 1;
   padding: 30px;
-  color: #323232;
-  text-align: center;
   width: auto;
   margin-left: -20px;
   margin-right: -20px;
+  position: relative;
 }
 
 .service-icon {
@@ -748,4 +747,159 @@ a {
 
 .p-b {
   padding-bottom: 50px;
+}
+
+.resume-col-title,
+.skill-title {
+  margin-left: 20px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.resume-col-title:after,
+.skill-title:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  background: radial-gradient(
+    ellipse at center,
+    #dddddd 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+}
+
+.resume-col-title .icon,
+.skill-title .icon {
+  width: 40px;
+  height: 40px;
+  font-size: 32px;
+  color: #78cc6d;
+}
+
+.resume-col-title .name,
+.skill-title .name {
+  line-height: 14px;
+  color: #323232;
+  font-size: 17px;
+  text-transform: uppercase;
+  position: relative;
+  top: -5px;
+}
+
+.resume-items .resume-item {
+  padding: 30px 0;
+  position: relative;
+}
+
+.resume-items .resume-item:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: radial-gradient(
+    ellipse at center,
+    #dddddd 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+}
+
+.resume-items .resume-item .date {
+  margin: 0 0 11px 0;
+  padding: 0 5px;
+  font-size: 13px;
+  line-height: 18px;
+  color: #ccc;
+  font-weight: 400;
+  text-transform: none;
+  border: 1px solid #ccc;
+  display: inline-block;
+  position: relative;
+  border-radius: 4px;
+}
+
+.resume-items .resume-item .active {
+  color: #78cc6d;
+  border: 1px solid #78cc6d;
+}
+
+.resume-items .resume-item .name {
+  font-size: 17px;
+  color: #323232;
+  font-weight: 500;
+  text-transform: none;
+}
+
+.resume-items .resume-item .company {
+  margin: 0 0 11px 0;
+  font-size: 14px;
+  color: #999999;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.resume-items .resume-item p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0px;
+}
+
+.row .col {
+  font-size: 16px;
+}
+
+.skill-title {
+  padding: 0 0 30px 0;
+  position: relative;
+}
+
+.skills-list ul {
+}
+
+.skills-list ul li {
+  position: relative;
+  padding: 20px 0;
+}
+
+.borderline-bottom:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: radial-gradient(
+    ellipse at center,
+    #dddddd 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+}
+
+.skills-list ul li .name {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  line-height: 14px;
+  color: #626262;
+}
+
+.skills-list ul li .progress {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #d8dbe2;
+}
+
+.skills-list ul li .progress .percentage {
+  position: absolute;
+  height: 100%;
+  background-color: #78cc6d;
+  transition: all 0.3s ease 0s;
 }
