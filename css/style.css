@@ -903,3 +903,40 @@ ul {
   background-color: #78cc6d;
   transition: all 0.3s ease 0s;
 }
+
+.grid-items {
+  position: relative;
+}
+
+.grid-items .grid-item {
+  text-align: center;
+}
+
+.grid-item .image {
+  padding: 0;
+}
+
+.grid-item .image img {
+  max-width: 250px;
+  margin-bottom: 10px;
+}
+
+.grid-item .image:hover {
+  opacity: 0.5;
+  transition: all 0.3s ease 0s;
+}
+
+.grid-item .name {
+  padding: 0;
+  display: block;
+  font-size: 17px;
+  color: #323232;
+  font-weight: 500;
+  transition: all 0.3s ease 0s;
+}
+
+.grid-item .category {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  color: #999999;
+}
