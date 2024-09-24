@@ -4,7 +4,7 @@ body {
   -webkit-box-sizing: border-box;
   font-family: "Poppins";
   font-size: 14px;
-  color: #626262;
+  color: #646464;
   letter-spacing: 0em;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -266,7 +266,7 @@ a:hover {
   transition: all 0.3s ease 0s;
 }
 
-.active a {
+ul .active a {
   color: #78cc6d !important;
 }
 
@@ -434,73 +434,57 @@ a {
   bottom: 0;
 }
 
-.card-inner .active {
-  opacity: 1;
-  visibility: visible;
-  z-index: 10;
-}
-
 .card-inner {
-  padding: 0;
+  width: 642px;
+  height: auto;
+  overflow: scroll;
+  overflow-x: hidden;
   position: absolute;
-  overflow: hidden;
-  left: 560px;
-  right: 0;
   top: 65px;
   bottom: -35px;
-  width: auto;
-  height: auto;
-  border-radius: 0 4px 4px 0;
-  transition: visibility 1s linear, opacity 0s linear;
-  background: #ffffff;
-  transform-origin: center left;
+  left: 560px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 30px;
 }
 
-.card-inner:before {
-  height: 30px;
+.card-inner:before,
+.card-inner:after {
   content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 20px;
-  background: #ffffff;
+  background-color: #ffffff;
+  width: 620px;
+  height: 30px;
   z-index: 10;
+  position: fixed;
+  margin: -30px 0px 0px -30px;
 }
 
-.card-inner .card-wrap {
-  padding: 30px 30px 0 30px;
-  position: relative;
-  height: 100%;
-  overflow: auto;
-  overflow-x: hidden;
-}
-
-.card-wrap .content {
-  margin: 0 0 40px 0;
-  position: relative;
-}
-
-.card-wrap .content .title {
-  margin: 0 0 0 0;
-  padding: 0 0 30px 0;
+.card-inner .title {
   font-size: 20px;
-  line-height: 21px;
-  min-height: 51px;
-  font-weight: 600;
-  z-index: 2;
-  position: relative;
+  padding-bottom: 25px;
+  font-weight: 700;
   color: #323232;
-  top: -410px;
+  position: relative;
 }
 
-.card-wrap .content .title:before {
+.card-inner .title .firstword {
+  color: #78cc6d;
+}
+
+.card-inner p {
+  line-height: 1.8em;
+  margin-top: 30px;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+.card-inner .title:before {
   content: "";
   position: absolute;
   left: -12px;
-  top: 0;
+  top: 5px;
   width: 30px;
   height: 30px;
-  z-index: -1;
   border-radius: 30px;
   background: linear-gradient(
     135deg,
@@ -509,63 +493,259 @@ a {
   );
 }
 
-.card-wrap .content .title .first-word {
-  color: #78cc6d !important;
-  margin-right: 5px;
-}
-
-.card-wrap .content .title:after {
+.card-inner .title:after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: auto;
   left: -30px;
   right: 0;
   bottom: 0;
-  width: auto;
   background: radial-gradient(
     ellipse at left,
     #dddddd 0%,
     rgba(255, 255, 255, 0) 70%
   );
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.table {
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.col {
+  flex: 1;
+  padding: 30px;
+  color: #323232;
+  text-align: center;
+  width: auto;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 32px;
+  color: #ffffff;
+  background-color: #78cc6d;
+  display: flex; /* Use flexbox for centering */
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+  margin: 0 auto;
+}
+
+.col .service-icon .span {
+  margin-top: 10px;
+}
+
+.col:after {
   content: "";
   position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   height: 1px;
-  top: 50px;
+  background: radial-gradient(
+    ellipse at center,
+    #dddddd 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
 }
 
-.card-wrap .row {
-  margin: 0 -30px;
-  position: relative;
-  font-size: 0;
-  top: -215px;
-  left: -90px;
+.service-name {
+  font-size: 17px;
+  margin: 10px 0 5px 0;
+  color: #323232;
+  font-weight: 500;
 }
 
-.card-wrap .row .col {
-  padding: 30px;
+.service-fe {
+  margin: 0;
   font-size: 16px;
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
+  color: #646464;
+  font-weight: 700;
+  line-height: 1.8em;
 }
 
-.card-wrap .content .about p {
+.col p {
+  margin: 0;
+}
+
+.col p span {
+  color: #78cc6d;
+}
+
+.row:after {
+  margin: 0 0 0 -1px;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at top,
+    #dddddd 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+}
+
+.prices {
+  margin-top: 30px;
+}
+
+.pricing-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 32px;
+  color: #78cc6d;
+  background-color: #ffffff;
+  display: flex; /* Use flexbox for centering */
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+  margin: 0 auto;
+}
+
+.pricing-name {
+  color: #323232;
+  font-size: 17px;
+  margin: 0 0 20px 0;
+  font-weight: 500;
+}
+
+.amount {
+  margin: 0 0 5px 0;
+}
+
+.dollar {
+  font-size: 16px;
+  bottom: 14px;
+  position: relative;
+}
+
+.number {
+  font-size: 42px;
+  font-weight: 500;
+}
+
+.period {
+  color: #646464;
+}
+
+.p-p {
+  color: #646464;
+  margin: 10px 0;
+  padding: 5px 0;
+}
+
+.disabled {
+  text-decoration: line-through;
+  opacity: 0.6;
   margin-bottom: 0;
 }
 
-.card-wrap .text-box p {
-  margin-top: 0;
+.col-links {
+  padding: 25px 20px;
+  text-transform: uppercase;
+  position: relative;
 }
 
-p {
-  font-size: 16px;
-  line-height: 1.8em;
-  margin: 0 0 25px 0;
+.col-links i {
+  font-size: 18px;
+  margin-left: 4px;
+  top: 2px;
+  position: relative;
 }
 
-.card-wrap .clear {
-  clear: both;
-}
-
-.card-wrap .row:after {
+.col-links:before {
   content: "";
-  display: block;
-  clear: both;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background: radial-gradient(
+    ellipse at center,
+    #dddddd 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+}
+
+.row-clients {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+
+.col-client-item {
+  flex: 1;
+  padding: 30px;
+  position: relative;
+}
+
+.col-client-item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at top,
+    #dddddd 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+}
+
+.img img {
+  width: 90px;
+  height: 90px;
+  opacity: 0.5;
+}
+
+.img img:hover {
+  opacity: 1;
+  transition: all 0.3s ease 0s;
+}
+
+.img-label {
+  color: #78cc6d;
+  text-align: center;
+}
+
+.fact-item {
+  text-align: center;
+  position: relative;
+}
+
+.fact-item .icon {
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 32px;
+  color: #78cc6d;
+}
+
+.fact-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #646464;
+  text-transform: none;
+}
+
+.p-b {
+  padding-bottom: 50px;
 }
