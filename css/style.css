@@ -940,3 +940,168 @@ ul {
   font-size: 14px;
   color: #999999;
 }
+
+.map {
+  margin: 30px 0 20px 0;
+  height: 240px;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+.info-list {
+  padding-top: 0;
+  margin-bottom: 50px;
+}
+
+.info-list ul {
+  margin: -11px -30px 0 30px;
+  font-size: 0;
+}
+
+.info-list ul li {
+  padding: 11px 30px;
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+  position: relative;
+  font-size: 16px;
+  text-align: right;
+  line-height: 1.6;
+}
+
+.info-list ul li strong {
+  float: left;
+  margin-right: 8px;
+  padding: 1px 8px;
+  background: #78cc6d;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fefefe;
+  font-weight: 400;
+  text-transform: none;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+.info-list ul li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: radial-gradient(
+    ellipse at center,
+    #dddddd 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+}
+
+.contact-form {
+  padding: 20px;
+}
+
+input {
+  padding: 0 15px;
+  font-size: 16px;
+  height: 50px;
+  color: #323232;
+  border: 2px solid #eeeeee;
+  margin-bottom: 30px;
+  display: block;
+  font-family: "Poppins";
+  width: 40%;
+  background: none;
+  appearance: none;
+  resize: none;
+  outline: 0;
+  transition: all 0.3s ease 0s;
+  border-radius: 0px;
+  float: left;
+}
+
+textarea {
+  padding: 15px;
+  height: 94px;
+  font-size: 16px;
+  color: #323232;
+  border: 2px solid #eeeeee;
+  display: block;
+  font-family: "Poppins";
+  width: 100%;
+  background: none;
+  appearance: none;
+  resize: none;
+  outline: 0;
+  border-radius: 0px;
+  transition: all 0.3s ease 0s;
+  margin-bottom: 30px;
+}
+
+.align-left {
+  text-align: left !important;
+}
+
+.button {
+  padding: 0 30px;
+  display: inline-block;
+  float: none;
+  width: auto;
+  height: 50px;
+  line-height: 50px;
+  background: #eeeeee;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #323232;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  position: relative;
+}
+
+.button .text {
+  padding-left: 14px;
+  transition: all 0.3s ease 0s;
+}
+
+.button .arrow {
+  margin: 0 8px;
+  position: relative;
+  top: -1px;
+  left: 0;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 18px;
+  transition: all 0.3s ease 0s;
+  width: 14px;
+  height: 2px;
+}
+
+.button .arrow:before {
+  background: #323232;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease 0s;
+}
+
+.button .arrow:after {
+  background: #323232;
+  left: auto;
+  top: auto;
+  right: 0;
+  bottom: 3px;
+  width: 8px;
+  height: 2px;
+  transform: rotate(45deg);
+  content: "";
+  position: absolute;
+  transition: all 0.3s ease 0s;
+}
