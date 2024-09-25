@@ -221,11 +221,24 @@ body {
   height: auto;
   display: block;
   color: #323232;
-  border-bottom: 1px solid #323232;
 }
 
-.content_con header ul li:last-child a {
-  border-bottom: none; /* Remove the bottom border for the last item */
+.border-top {
+  position: relative;
+}
+
+.border-top::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: radial-gradient(
+    ellipse at right,
+    #dddddd 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
 }
 
 .content_con header ul li {
@@ -266,9 +279,9 @@ a:hover {
   transition: all 0.3s ease 0s;
 }
 
-ul .active a {
+/* ul .active a {
   color: #78cc6d !important;
-}
+} */
 
 .card {
   position: relative;
@@ -436,26 +449,35 @@ a {
 
 .card-inner {
   width: 642px;
-  height: auto;
+  height: 560px;
   overflow: scroll;
   overflow-x: hidden;
   position: absolute;
   top: 65px;
-  bottom: -35px;
+  bottom: 30px;
   left: 560px;
   background-color: #ffffff;
   border-radius: 4px;
   padding: 30px;
 }
 
+.scroll-thin::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 5px;
+}
+
+.scroll-thin::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
 .card-inner:before,
 .card-inner:after {
   content: "";
   background-color: #ffffff;
-  width: 620px;
+  width: 685px;
   height: 30px;
   z-index: 10;
-  position: fixed;
+  position: absolute;
   margin: -30px 0px 0px -30px;
 }
 
@@ -512,6 +534,7 @@ a {
   display: flex;
   flex-direction: row;
   position: relative;
+  width: auto;
 }
 
 .table {
@@ -527,6 +550,7 @@ a {
   margin-left: -20px;
   margin-right: -20px;
   position: relative;
+  /* box-sizing: border-box; */
 }
 
 .service-icon {
@@ -600,6 +624,10 @@ a {
 
 .prices {
   margin-top: 30px;
+}
+
+.pricing-item::after {
+  content: none;
 }
 
 .pricing-icon {
@@ -775,7 +803,7 @@ a {
 .skill-title .icon {
   width: 40px;
   height: 40px;
-  font-size: 32px;
+  font-size: 28px;
   color: #78cc6d;
 }
 
@@ -859,9 +887,6 @@ ul {
 .skill-title {
   padding: 0 0 30px 0;
   position: relative;
-}
-
-.skills-list ul {
 }
 
 .skills-list ul li {
@@ -1003,7 +1028,7 @@ iframe {
   padding: 20px;
 }
 
-input {
+.inputForm {
   padding: 0 15px;
   font-size: 16px;
   height: 50px;
@@ -1104,4 +1129,112 @@ textarea {
   content: "";
   position: absolute;
   transition: all 0.3s ease 0s;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+/* Default: show only About */
+#ab:checked ~ .main .content .content_con #about {
+  visibility: visible;
+  opacity: 1;
+  animation: fadeInLeft 2s ease forwards;
+}
+
+#ab:checked ~ .main .content .content_con header ul li label .buttonLabelAb {
+  color: #78cc6d !important;
+}
+
+/* Resume */
+#re:checked ~ .main .content .content_con #resume {
+  visibility: visible;
+  opacity: 1;
+  animation: fadeInLeft 2s ease forwards;
+}
+
+#re:checked ~ .main .content .content_con header ul li label .buttonLabelRe {
+  color: #78cc6d !important;
+}
+
+/* Works */
+#wo:checked ~ .main .content .content_con #works {
+  visibility: visible;
+  opacity: 1;
+  animation: fadeInLeft 2s ease forwards;
+}
+
+#wo:checked ~ .main .content .content_con header ul li label .buttonLabelWo {
+  color: #78cc6d !important;
+}
+
+/* Contacts */
+#co:checked ~ .main .content .content_con #contacts {
+  visibility: visible;
+  opacity: 1;
+  animation: fadeInLeft 2s ease forwards;
+}
+
+#co:checked ~ .main .content .content_con header ul li label .buttonLabelCo {
+  color: #78cc6d !important;
+}
+
+/* When a new interface is checked, fade out the old one */
+.old-one {
+  opacity: 0;
+  visibility: hidden;
+  animation: fadeOutLeft 2s ease forwards;
+}
+
+/* Define the fadeInLeft animation */
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Define the fadeOutLeft animation */
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+}
+
+.old-one {
+  visibility: hidden;
+  opacity: 0;
+  transition: visiblity 0s, opacity 0.5s ease;
+}
+
+.no-before::before {
+  content: none;
+}
+
+.no-after {
+  position: relative;
+}
+
+.no-after::after {
+  content: none !important;
+}
+
+.grid-item::after {
+  content: none !important;
+}
+
+.grid-items::after {
+  background: #dddddd !important;
+}
+
+.container {
 }

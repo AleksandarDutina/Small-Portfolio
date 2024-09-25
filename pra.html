@@ -15,12 +15,18 @@
     />
   </head>
   <body>
+    <!-- Radio buttons to switch between the interfaces -->
+    <input type="radio" name="toggle" id="ab" checked />
+    <input type="radio" name="toggle" id="re" />
+    <input type="radio" name="toggle" id="wo" />
+    <input type="radio" name="toggle" id="co" />
+
     <div class="main">
       <div class="loader">
         <div class="loading loading1"></div>
         <div class="loading loading2"></div>
       </div>
-      <div class="content">
+      <div class="content container">
         <div class="content_bg">
           <ul class="bubble">
             <li></li>
@@ -39,29 +45,37 @@
           <header>
             <ul>
               <li class="about active">
-                <a href="#about">
-                  <!-- Use Font Awesome 6 icon classes -->
-                  <i class="icon fa fa-user"></i>
-                  <span class="link">ABOUT</span>
-                </a>
+                <label for="ab">
+                  <a class="buttonLabelAb border-top">
+                    <!-- Use Font Awesome 6 icon classes -->
+                    <i class="icon fa fa-user"></i>
+                    <span class="link">ABOUT</span>
+                  </a></label
+                >
               </li>
               <li class="resume">
-                <a href="#resume">
-                  <i class="icon fa fa-list-alt"></i>
-                  <span class="link">RESUME</span>
-                </a>
+                <label for="re">
+                  <a class="buttonLabelRe border-top">
+                    <i class="icon fa fa-list-alt"></i>
+                    <span class="link">RESUME</span>
+                  </a></label
+                >
               </li>
               <li class="works">
-                <a href="#works">
-                  <i class="icon fa fa-object-ungroup"></i>
-                  <span class="link">WORKS</span>
-                </a>
+                <label for="wo">
+                  <a class="buttonLabelWo border-top">
+                    <i class="icon fa fa-object-ungroup"></i>
+                    <span class="link">WORKS</span>
+                  </a></label
+                >
               </li>
               <li class="contact">
-                <a href="#contacts">
-                  <i class="icon fa fa-envelope"></i>
-                  <span class="link">CONTACT</span>
-                </a>
+                <label for="co">
+                  <a class="buttonLabelCo border-top">
+                    <i class="icon fa fa-envelope"></i>
+                    <span class="link">CONTACT</span>
+                  </a></label
+                >
               </li>
             </ul>
           </header>
@@ -94,8 +108,8 @@
             </div>
           </div>
 
-          <div id="about" style="display: none">
-            <div class="card-inner active">
+          <div id="about" class="old-one">
+            <div class="card-inner active scroll-thin">
               <div class="title"><span class="firstword">About </span>Me</div>
               <p>
                 Hi, I’m John, a web3 developer, from Bulgaria. I have rich
@@ -138,7 +152,7 @@
                       private blockchain nodes, etc.
                     </p>
                   </div>
-                  <div class="col">
+                  <div class="col" style="height: 274px">
                     <div class="service-icon">
                       <i class="fa fa-code"></i>
                     </div>
@@ -177,7 +191,7 @@
                 </div>
               </div>
               <div class="title prices">
-                <span class="firstword">Prices</span>
+                <span class="firstword">P</span>ricing
               </div>
               <div class="table">
                 <div class="row">
@@ -204,7 +218,7 @@
                       </a>
                     </div>
                   </div>
-                  <div class="col">
+                  <div class="col pricing-item">
                     <div class="pricing-icon">
                       <i class="fa fa-trophy"></i>
                     </div>
@@ -227,10 +241,10 @@
                   </div>
                 </div>
               </div>
-              <div class="title"><span class="firstword">Clients</span></div>
+              <div class="title"><span class="firstword">C</span>lients</div>
 
               <div class="row-clients">
-                <div class="col-client-item">
+                <div class="col-client-item no-before">
                   <a href="#" class="img"
                     ><img src="./img/clients/client_1.png" alt=""
                   /></a>
@@ -258,9 +272,9 @@
                   <a href="#" class="img-label">Avalaunch</a>
                 </div>
               </div>
-              <div class="title"><span class="firstword">Fun</span> Fact</div>
+              <div class="title"><span class="firstword">F</span>un Fact</div>
               <div class="row-clients p-b">
-                <div class="col-client-item">
+                <div class="col-client-item no-before">
                   <div class="fact-item">
                     <div class="icon">
                       <span class="fa fa-trophy"></span>
@@ -299,11 +313,11 @@
               </div>
             </div>
           </div>
-          <div id="resume" style="display: none">
-            <div class="card-inner">
-              <div class="title"><span class="firstword">Resume</span></div>
+          <div id="resume" class="old-one">
+            <div class="card-inner scroll-thin">
+              <div class="title"><span class="firstword">R</span>esume</div>
               <div class="row">
-                <div class="col">
+                <div class="col no-after">
                   <div class="resume-col-title">
                     <span class="icon">
                       <i class="fa fa-briefcase"></i>
@@ -373,7 +387,7 @@
                         </li>
                       </ul>
                     </div>
-                    <div class="resume-item">
+                    <div class="resume-item no-after">
                       <div class="date">2018 - 2019</div>
                       <div class="name">
                         Blockchain & Smart Contract Developer
@@ -393,7 +407,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col">
+                <div class="col no-after">
                   <div class="resume-col-title">
                     <span class="icon">
                       <i class="fa fa-university"></i>
@@ -463,7 +477,7 @@
                       </p>
                     </div>
 
-                    <div class="resume-item">
+                    <div class="resume-item no-after">
                       <div class="name">Ecommerce & Marketing courses</div>
                       <div class="company">Online</div>
                       <p><i>"Shopify Ecom Freedom" </i>by Dan Vas</p>
@@ -545,10 +559,10 @@
               </div>
             </div>
           </div>
-          <div id="works" style="display: none">
-            <div class="card-inner">
+          <div id="works" class="old-one">
+            <div class="card-inner scroll-thin">
               <div class="title">
-                <span class="firstword">Recent</span> Works
+                <span class="firstword">R</span>ecent Works
               </div>
               <div class="row grid-items">
                 <div class="col grid-item">
@@ -604,10 +618,10 @@
               </div>
             </div>
           </div>
-          <div id="contacts">
-            <div class="card-inner">
+          <div id="contacts" class="old-one">
+            <div class="card-inner scroll-thin">
               <div class="title">
-                <span class="firstword">Get </span>in Touch
+                <span class="firstword">G</span>et in Touch
               </div>
               <div class="map">
                 <iframe
@@ -627,12 +641,18 @@
                 </ul>
               </div>
               <div class="title">
-                <span class="firstword">Contact </span>Form
+                <span class="firstword">C</span>ontact Form
               </div>
               <div class="contact-form">
                 <form>
-                  <input type="text" name="name" placeholder="Full Name" />
                   <input
+                    class="inputForm"
+                    type="text"
+                    name="name"
+                    placeholder="Full Name"
+                  />
+                  <input
+                    class="inputForm"
                     type="text"
                     style="float: right"
                     name="email"
